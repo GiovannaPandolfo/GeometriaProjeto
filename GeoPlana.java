@@ -4,8 +4,7 @@
 import java.util.Scanner;
 
 public class GeoPlana {
-        double area = 0;
-        double area2 = 0;
+        double area, area2, area3 = 0;
         double largura = 0;
         double altura = 0;
         double areatriangulo = 0;
@@ -14,7 +13,9 @@ public class GeoPlana {
         double basesuperior = 0;
         double baseinferior = 0;
         double areatrapezio = 0;
-
+        double digmaior = 0;
+        double digmenor = 0;
+        double lado = 0;
         
 
     public void Retangulo(){
@@ -81,6 +82,50 @@ public class GeoPlana {
         }
         System.out.println("a area circulo conciderando pi 3,14 é "+areacirculo);
        }
+
+       public void Paralelo(){
+        Scanner ler = new Scanner(System.in);
+        for(int i=1; i<=1; i++) {
+            System.out.println("digite a altura");
+            altura = ler.nextInt();
+
+            System.out.println("digite a largura");
+            largura = ler.nextInt();
+            area = largura * altura;
+        }
+        System.out.println("a area: "+area);
+       }
+
+       public void losango(){
+        Scanner ler = new Scanner(System.in);
+        for(int i=1; i<=1; i++) {
+            System.out.println("digite a diagonal maior");
+            digmaior = ler.nextInt();
+
+            System.out.println("digite a diagonal menor");
+            digmenor = ler.nextInt();
+            area = digmaior * digmenor;
+            area2 = area/2;
+        }
+        System.out.println("a area: "+area2);
+       }
+
+       public void trianguloequilatero(){
+        Scanner ler = new Scanner(System.in);
+        for(int i=1; i<=1; i++) {
+            System.out.println("digite o lado");
+            lado = ler.nextInt();
+
+            area = lado * lado;
+            area2 = area/4;
+            area3 = area2 * 1.732;
+        }
+        System.out.println("a area: "+area3);
+       }
+       
+
+       
+
        
     
 
