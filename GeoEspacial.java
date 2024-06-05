@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 public class GeoEspacial {
-        double area, area2, area3, areacirculo, areacilindro, areaL, areaB, volume, geratriz, areasuperficial, faces, areaface, areatotal, raioM= 0;
+        double area, area2, area3, raiz2, raiz, base, basem, area3, areacirculo, areacilindro, areaL, areaB, volume, geratriz, areasuperficial, faces, areaface, areatotal, face, raioM= 0;
         double largura = 0;
         double altura = 0;
         double raio = 0;
@@ -87,7 +87,7 @@ public class GeoEspacial {
                 System.out.println("a area lateral:"+areaL+" area total:"+areatotal+" e o volume é:"+area3);
                }
 
-               public void troncoC(){
+               public void troncoCone(){
                 Scanner ler = new Scanner(System.in);
                 for(int i=1; i<=1; i++) {
                     System.out.println("digite o raio base");
@@ -107,24 +107,43 @@ public class GeoEspacial {
                 System.out.println("o volume do tronco cone é:"+volume);
                }
 
-               public void troncoP(){
+               public void prisma(){
                 Scanner ler = new Scanner(System.in);
                 for(int i=1; i<=1; i++) {
-                    System.out.println("digite o raio base");
-                    raio = ler.nextInt();
-                    System.out.println("digite o raio menor");
-                    raioM = ler.nextInt();
-                    System.out.println("digite o raio altura do tronco");
-                    altura= ler.nextInt();
+                    System.out.println("digite a area da base");
+                    areaB = ler.nextInt();
+                    System.out.println("digite a altura");     
+                    altura = ler.nextInt();
+                    System.out.println("qual o numero de faces laerais");     
+                    faces = ler.nextInt();
+                    System.out.println("digite a area da face lateral");     
+                    face = ler.nextInt();
 
-                    area = raio * raio;
-                    area2 = raioM * raioM;
-                    areaL = (area + raio)*area2 + raioM;
-                    areaB = 3.14 * altura * areaL;
-                    volume = areaB / 3;
-
+                    area = areaB * altura;
+                    area2 = face * faces + areaB;
+                    volume = areaB * altura;
                 }
-                System.out.println("o volume do tronco cone é:"+volume);
+                System.out.println("a area total é"+area2+". A area lateral é:"+area+" e o volume é:"+volume);
+               }
+
+               public void troncopiramide(){
+                Scanner ler = new Scanner(System.in);
+                for(int i=1; i<=1; i++) {
+                    System.out.println("digite a altura do tronco");
+                    altura = ler.nextInt();
+                    System.out.println("digite a area da base menor");
+                    basem = ler.nextInt();
+                    System.out.println("digite a area da base");
+                    base = ler.nextInt();
+
+                    area = basem + base;
+                    area2 = basem * basem;
+                    area3 = base * base;
+                    volume = area2 * area3;
+                    raiz = Math.sqrt(volume);
+                    raiz2 = altura * raiz;
+                }
+                System.out.println("o volume do tronco é;"+raiz2);
                }
 
 
