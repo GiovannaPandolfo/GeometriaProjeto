@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main{
 
     public static void main(String[] args) {
-        system.out("1 - quadrado/retangulo"+"\n"+"2 - triangulo"+"\n"+"3 - triangulo equilatero"+"\n"+"4 - paralelograma"+"\n"+"5 - losango"+"\n"+"6 - trapezio"+"\n"+"7 - prismas"+"\n"+"8 - cilindro"+"\n"+"9 - piramide"+"\n"+"10 - esfera"+"\n"+"11 - cone"+"\n"+"12 - tronco cone"+"\n"+"13 tronco piramide")
+        System.out("1 - quadrado/retangulo"+"\n"+"2 - triangulo"+"\n"+"3 - triangulo equilatero"+"\n"+"4 - paralelograma"+"\n"+"5 - losango"+"\n"+"6 - trapezio"+"\n"+"7 - prismas"+"\n"+"8 - cilindro"+"\n"+"9 - piramide"+"\n"+"10 - esfera"+"\n"+"11 - cone"+"\n"+"12 - tronco cone"+"\n"+"13 tronco piramide")
         System.out.println("digite o numero da forma a ser calculada:");
         opcao = ler.nextInt();
 
@@ -11,7 +11,7 @@ public class Main{
             case 1:
                  GeoPlana.quadrado();
                 break;
-                
+
                 case 2:
                 GeoPlana.triangulo();
                break;
@@ -61,8 +61,10 @@ public class Main{
                 break;
                 
             default:
+            System.err.println("\nOpção inválida!");
                 break;
         }
+
     }
 
 

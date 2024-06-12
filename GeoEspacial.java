@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 public class GeoEspacial {
-        double area, area2, area3, raiz2, raiz, base, basem, area3, areacirculo, areacilindro, areaL, areaB, volume, geratriz, areasuperficial, faces, areaface, areatotal, face, raioM= 0;
+        double area, area2, area3, raiz2, raiz, base, basem, areacirculo, areacilindro, areaL, areaB, volume, geratriz, areasuperficial, faces, areaface, areatotal, face, raioM= 0;
         double largura = 0;
         double altura = 0;
         double raio = 0;
@@ -25,7 +25,7 @@ public class GeoEspacial {
 
                     areaL = 6.28 * raio * altura;
                     areaB = 3.14 * area;
-                    volume = 3.14 * area * altura
+                    volume = 3.14 * area * altura;
 
                 }
                 System.out.println("o volume cilindro conciderando pi 3,14 é "+volume+" e a area lateral é:"+areaL+". e a area bases sao: "+areaB);
@@ -49,7 +49,7 @@ public class GeoEspacial {
 
 
                 }
-                System.out.println("a area lateral é"+areal+" area bases é "+areab+" e o volume"+volume);
+                System.out.println("a area lateral é"+areaL+" area bases é "+areaB+" e o volume"+volume);
                }
 
                public void esfera (){
